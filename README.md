@@ -19,3 +19,6 @@ The URL "amqp://guest:guest@localhost:5672" is the connection string for both th
 * :5672 - Port number (default port for RabbitMQ)
 
 Using the same connection string in both programs means they're connecting to the same RabbitMQ instance. This is necessary for the message passing to work - the publisher sends messages to this broker, and the subscriber retrieves them from the same broker. It's the foundation of the pub/sub messaging pattern being implemented with the CrosstownBus library, which is a wrapper around RabbitMQ.
+
+## Proof of Running RabbitMQ as message broker.
+![Running RabbitMQ](Running%20RabbitMQ.png)
