@@ -30,3 +30,6 @@ The terminal on the left shows the publisher app being run two times. On the rig
 When you I the publisher with cargo run, it sends 5 user creation events to RabbitMQ with different user IDs (1-5) and names (Amir, Budi, Cica, Dira, Emir). These events are formatted as UserCreatedEventMessage objects.
 The subscriber  connects to RabbitMQ at "amqp://guest:guest@localhost:5672" and listens on the "user_created" queue. When messages arrive, the UserCreatedHandler.handle() method processes each message and prints it to the console.
 
+## Proof of Monitoring Chart based on publisher.
+![Proof of Monitoring Chart based on publisher.](Monitoring%20chart%20based%20on%20publisher.png)
+The image shows a chart on RabbitMQ that has several spikes that are directly proportional to the time when I run the publisher program several times in the terminal. This means that the spikes are the result of publishing events from the publisher.
